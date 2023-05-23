@@ -1,0 +1,9 @@
+@startuml ユースケース図
+rectangle ホテル宿泊予約 {
+usecase (<u>予約</u>\n拡張点\nキャンペーン期間) as 特別予約
+usecase ログイン
+usecase キャンペーン価格に設定
+}
+キャンペーン価格に設定 .> 特別予約 : << extend >>
+特別予約 .> ログイン : << include >>
+@enduml
