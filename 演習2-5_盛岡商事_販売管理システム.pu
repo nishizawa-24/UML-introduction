@@ -1,0 +1,14 @@
+@startuml 例題3
+rectangle 盛岡商事 {
+    actor 田中さん
+    actor 鈴木さん
+    rectangle 販売管理システム {
+        usecase 注文商品の確認
+        usecase 商品の出荷状況の登録
+    }
+    田中さん --> 注文商品の確認
+    鈴木さん --> 商品の出荷状況の登録
+    販売部 <|-- 田中さん
+    販売部 <|-- 鈴木さん
+}
+@enduml
