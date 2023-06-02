@@ -1,0 +1,23 @@
+@startuml ユースケース図
+title ホテル予約
+actor 利用者
+actor ホテル従業員
+rectangle システム {
+    usecase 空室状況の閲覧
+    usecase 部屋の予約
+    usecase 空室状況の入力
+    usecase 予約の集計
+    usecase ログイン
+    usecase ログイン
+    usecase 会員登録
+}
+利用者 --> 空室状況の閲覧
+利用者 --> 部屋の予約
+利用者 --> ログイン
+利用者 --> 会員登録
+空室状況の入力 <-- ホテル従業員
+予約の集計 <-- ホテル管理者
+部屋の予約 .> ログイン : <<include>>
+ログイン .> 会員登録 : <<include>>
+空室状況の入力 <. ログイン : <<include>>
+予約の集計 <. ログイン : <<include>>
