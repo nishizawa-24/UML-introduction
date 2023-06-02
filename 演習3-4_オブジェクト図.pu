@@ -1,0 +1,13 @@
+@startuml オブジェクト図
+left to right direction
+
+object "<u>車:車</u>" as c {
+    台数=1
+}
+
+object "<u>タイヤ:タイヤ</u>" as t {
+    タイヤ数=4
+}
+
+c -- t
+@enduml
