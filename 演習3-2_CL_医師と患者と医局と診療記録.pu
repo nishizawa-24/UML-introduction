@@ -1,0 +1,12 @@
+@startuml クラス図
+left to right direction
+
+class 医師 {
+    +医局
+    +診察():void
+    +記録作成():void
+}
+class 患者
+医師 --> 患者:診察 >
+医師 "1"--"*" 患者
+@enduml
